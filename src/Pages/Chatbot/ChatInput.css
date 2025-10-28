@@ -1,0 +1,43 @@
+.send-button {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.send-button:hover {
+    cursor: pointer;
+}
+
+.input {
+    border-radius: 50px;
+    padding: 10px 15px;
+    border-width: 1px;
+    font-size: 15px;
+    /* Makes input container grow as browser get's bigger*/
+    width: 80vw;
+    box-sizing: border-box;
+    height: 40px;
+    vertical-align: middle;
+    /* Preserves whitespace like using pre */
+    white-space: pre-wrap;
+    /* Long words are broken and wrap onto the next line*/
+    overflow-wrap: break-word;
+    overflow-y: hidden;
+    resize: none;
+}
+
+.chatinputcontainer {
+    position: fixed;
+    bottom: 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+}

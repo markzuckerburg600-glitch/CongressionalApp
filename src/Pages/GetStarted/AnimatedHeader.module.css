@@ -1,0 +1,287 @@
+.overallback{
+  position: relative;
+  width: 100%;
+}
+
+.hellothere{
+  border: 2px solid black;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+}
+
+.coolvideolol{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.coolstuffcontainer {
+  opacity: 0;
+  transform: translateY(50px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 60vh;
+}
+
+.storingdaticonandtext, .putliterallyeverythinghere{
+  position: relative;
+}
+
+/* Prefix everything else with .coolstuffcontainer to scope it */
+
+.coolstuffcontainer .particlete, .particletex,
+.particlet, .particletext, .particletexty{
+  font-size: 20px;
+  text-align: center;
+}
+
+.coolstuffcontainer span{
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  background: black;
+}
+
+.coolstuffcontainer .particle:hover .particlet {
+  opacity: 1;
+}
+
+.coolstuffcontainer .cells:hover .particlete{
+  background-color: rgba(128, 128, 128, 0.589);  
+  opacity: 1;
+}
+
+.coolstuffcontainer .jelly:hover .particletex{
+  opacity: 1;
+  background-color: rgba(214, 103, 203, 0.234);
+}
+
+.coolstuffcontainer .blobbs:hover .particletext{
+  opacity: 1;
+  background-color: rgba(173, 216, 230, 0.351);
+}
+
+.coolstuffcontainer .chase:hover .particletexty{
+  background-color: rgba(255, 255, 0, 0.297);
+  opacity: 1;
+}
+
+.coolstuffcontainer div {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid hsla(0,0%,0%,.7);
+  box-shadow: inset 0 15px 15px -5px hsla(0,0%,100%,.7),
+              inset 0 -5px 10px 3px hsla(0,0%,0%,.6),
+              0 8px 10px 2px hsla(0,0%,0%,.3);
+  background-position: center;
+  transform: scale(.66);
+  transition: transform .5s cubic-bezier(.32,0,.15,1);
+}
+
+.coolstuffcontainer div:hover {
+  opacity: 1;
+  cursor: none;
+  transform: scale(1);
+  transition: transform .2s cubic-bezier(.32,0,.15,1);
+}
+
+/* Particle styles */
+
+.coolstuffcontainer .particle {
+  background-size: 12px 12px;
+  background-color: #000;
+  box-shadow: inset 0 15px 15px -5px hsla(0, 0%, 100%, .25),
+    inset 0 -5px 10px 3px hsla(0, 0%, 0%, .6),
+    0 8px 10px 2px hsla(0, 0%, 0%, .3);
+  background-image: radial-gradient(#555 0px, hsla(0, 0%, 0%, 0) 2px, hsla(0, 0%, 0%, 0) 24px),
+    repeating-radial-gradient(white 0px, black 2px, black 48px);
+}
+.coolstuffcontainer .particle:hover {
+  animation: particle-size .24s linear infinite,
+             particle-position .48s linear infinite alternate;
+}
+@keyframes particle-size {
+  from { background-size: 6px 6px, 12px 12px; }
+  to { background-size: 12px 12px, 24px 24px; }
+}
+@keyframes particle-position {
+  from { background-position: 60px, 60px; }
+  to { background-position: 140px, 140px; }
+}
+
+/* Growing Cells -------------------------------------------- */
+.coolstuffcontainer .cells {
+  background-size: 24px 24px;
+  background-color: #fff;
+  background-image: repeating-radial-gradient(black 8px, white 12px);
+}
+.coolstuffcontainer .cells:hover {
+  animation: cells 0.4s linear infinite;
+}
+@keyframes cells {
+  from { background-size: 12px 12px; }
+  to { background-size: 24px 24px; }
+}
+
+/* Jelly -------------------------------------------- */
+.coolstuffcontainer .jelly {
+  background-size: 60px 60px;
+  background-color: rgb(235, 155, 208);
+  background-image: repeating-radial-gradient(hsla(320, 100%, 60%, .6) 0px, hsla(220, 100%, 60%, 0) 60%),
+    repeating-radial-gradient(hsla(330, 100%, 40%, 1) 12%, hsla(320, 80%, 60%, 1) 24px);
+}
+.coolstuffcontainer .jelly:hover {
+  animation: jelly 1.4s cubic-bezier(.1, .4, .9, .6) infinite;
+}
+@keyframes jelly {
+  from { background-size: 60px 60px, 24px 24px; }
+  50% { background-size: 120px 120px, 100px 100px; }
+  to { background-size: 24px 24px, 140px 140px; }
+}
+
+/* Blobbs -------------------------------------------- */
+.coolstuffcontainer .blobbs {
+  background-size: 66px 66px;
+  background-color: hsl(200, 100%, 50%);
+  background-image: repeating-radial-gradient(hsla(180, 1%, 78%, 0.8) 0px, hsla(200, 100%, 80%, .5) 4px, hsla(200, 100%, 80%, 0) 50px),
+    repeating-radial-gradient(hsla(260, 100%, 0%, 0) 0px, hsla(260, 100%, 50%, .1) 2px, hsla(260, 100%, 0%, 0) 10px);
+}
+.coolstuffcontainer .blobbs:hover {
+  animation: blobbs-position 6s cubic-bezier(.4, 0, .2, 1) infinite,
+             blobbs-size .75s cubic-bezier(.4, 0, .2, 1) infinite alternate;
+}
+@keyframes blobbs-position {
+  0% { background-position: left top, left top; }
+  25% { background-position: right top, left bottom; }
+  50% { background-position: right bottom, right bottom; }
+  75% { background-position: left bottom, right top; }
+  100% { background-position: left top, left top; }
+}
+@keyframes blobbs-size {
+  from { background-size: 200px 200px, 200px 200px; }
+  to { background-size: 66px 66px, 66px 66px; }
+}
+
+/* The Chase -------------------------------------------- */
+.coolstuffcontainer .chase {
+  background-repeat: no-repeat, repeat;
+  background-size: 180px 180px;
+  background-color: hsl(50, 100%, 70%);
+  background-image: repeating-radial-gradient(hsla(50, 100%, 100%, 1) 0px, hsla(50, 100%, 90%, 1) 10px, hsla(50, 100%, 70%, .2) 12px, hsla(50, 100%, 70%, 0) 130px),
+    repeating-radial-gradient(hsla(20, 100%, 50%, 0) 20%, hsla(20, 100%, 50%, .4) 80%, hsla(50, 100%, 70%, 1) 120px);
+}
+.coolstuffcontainer .chase:hover {
+  animation: chase-position 1.2s infinite, chase-size .4s infinite alternate;
+}
+@keyframes chase-position {
+  0% { background-position: left top, left top; }
+  25% { background-position: right top, left bottom; }
+  50% { background-position: right bottom, right bottom; }
+  75% { background-position: left bottom, right top; }
+  100% { background-position: left top, left top; }
+}
+@keyframes chase-size {
+  from { background-size: 120px 120px, 300px 300px; }
+  50% { background-size: 160px 160px, 150px 150px; }
+  to { background-size: 180px 180px, 100px 100px; }
+}
+
+.buttoncontainer{
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.signinbutton{
+  opacity: 0;
+  transform: translateY(50px);
+  background-color: white;
+  font-size: 1.5vw;
+  align-items: center;
+  aspect-ratio: 1/1;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  transition: color 0.5s ease-in;
+  transition: background-color 0.25s;
+  color: black;
+  border: 2px black solid;
+  padding-top: 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.signinbutton:hover{
+  background-color: black;
+  color:white;
+  border: white 2px solid;
+}
+
+.backgroundthingy{
+  height: 30vh;
+
+}
+.textthingthing{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.video1{
+  height: 20vw;
+  width: 25vh;
+}
+
+.video2{
+  height: 20vw;
+  width: 25vh;
+}
+
+.storingdaticonandtext{
+  display: flex;
+  flex-direction: row;
+}
+
+.text{
+  opacity: 0;
+  transform: translateY(50px);
+  padding-top: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  width: 100vw;
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+@keyframes fadeitup{
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.animate{
+  animation: fadeitup 1.5s forwards 1 
+}

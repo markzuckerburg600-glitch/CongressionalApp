@@ -1,0 +1,11 @@
+
+.flashbody{
+    background: linear-gradient( rgb(219, 205, 127), rgb(245, 164, 15));
+    margin: 0;
+    overflow: hidden;
+}
+
+.other{
+    height: 100vh;
+    background: linear-gradient( rgb(219, 205, 127), rgb(245, 164, 15));
+}
