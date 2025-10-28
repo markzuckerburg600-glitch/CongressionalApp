@@ -1,0 +1,116 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title{
+    font-family: "Inter", sans-serif;
+    display: flex; 
+    justify-content: center;
+    margin-top: clamp(20px, 0.5vh, 40px)
+}
+
+.flashcard-container{
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 4px;
+    margin-bottom: 50px;
+    font-family: "Inter", sans-serif;
+    perspective: 1000px;
+}
+
+.flashcard{
+    font-size: 30px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Enables 3DS use */
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    transition: transform 0.6s;
+    transform: rotateY(0deg);
+}
+
+.flashcardis-flipped{
+    font-size: 30px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Enables 3DS use */
+    transform-style: preserve-3d;
+    margin: 0 auto;
+}
+
+.flashcard div, .flashcardis-flipped div{
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 0px 2px 10px 2px 
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.flip-card{
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(241, 120, 21);
+    color: white;
+    transition: box-shadow 0.25s ease-in;
+    width: 20%;
+}
+
+.flip-card:hover{
+    cursor: pointer;
+    box-shadow: 0px 4px 10px black;  
+}
+
+.flip-card:active{
+    transform: scale(0.95);
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+}
+
+.changebuttons{
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.25s ;
+    transition: color 0.25s;
+}
+
+.changebuttons:hover{
+    background-color: rgb(159, 153, 153);
+    color: white;
+}
+
+.changebuttons:active{
+    transform: scale(0.95);
+}
